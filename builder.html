@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LaunchForge AI Builder</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="builder-page">
+
+<header class="builder-topbar">
+  <a class="logo" href="index.html">✦ LaunchForge AI</a>
+  <div class="top-actions">
+    <button id="saveBtn" class="btn secondary">Save</button>
+    <button id="exportBtn" class="btn secondary">Export HTML</button>
+    <button id="publishBtn" class="btn primary">Publish</button>
+  </div>
+</header>
+
+<div class="builder-layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">PROJECT</div>
+      <button class="side-btn active" data-panel="builder">✦ AI Builder</button>
+      <button class="side-btn" data-panel="stack">▣ Business Stack</button>
+      <button class="side-btn" data-panel="settings">⚙ Settings</button>
+    </div>
+
+    <div class="project-box">
+      <span>Current project</span>
+      <strong id="projectNameSide">My Business</strong>
+    </div>
+
+    <div class="credits">
+      <span>AI Credits</span>
+      <strong id="credits">25</strong>
+    </div>
+  </aside>
+
+  <main class="workspace">
+
+    <section id="builderPanel" class="workspace-panel">
+
+      <div class="panel-header">
+        <div>
+          <div class="eyebrow">AI WEBSITE BUILDER</div>
+          <h1>Build through conversation.</h1>
+          <p>Describe your business and LaunchForge creates the website for you.</p>
+        </div>
+
+        <div class="preview-controls">
+          <button id="desktopBtn" class="view-btn active">Desktop</button>
+          <button id="mobileBtn" class="view-btn">Mobile</button>
+        </div>
+      </div>
+
+      <div class="builder-content">
+
+        <div class="chat-panel">
+
+          <div id="chatMessages" class="chat-messages">
+            <div class="chat-message ai-message">
+              <strong>LaunchForge AI</strong>
+              <p>Tell me what business you want to build. For example: “Create a premium cleaning company website.”</p>
+            </div>
+          </div>
+
+          <div class="prompt-examples">
+            <button class="prompt-chip" data-prompt="Create a premium car detailing website">Car detailing</button>
+            <button class="prompt-chip" data-prompt="Create a business coaching website">Business coach</button>
+            <button class="prompt-chip" data-prompt="Create a modern cleaning company website">Cleaning company</button>
+          </div>
+
+          <form id="chatForm" class="chat-form">
+            <textarea id="promptInput" rows="3" placeholder="Describe the website you want..."></textarea>
+            <button class="btn primary" type="submit">Generate Website ✦</button>
+          </form>
+
+        </div>
+
+        <div class="preview-panel">
+
+          <div class="preview-toolbar">
+            <span>LIVE PREVIEW</span>
+            <span id="previewStatus">Ready</span>
+          </div>
+
+          <iframe id="sitePreview" title="Website preview"></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="stackPanel" class="workspace-panel hidden">
+
+      <div class="panel-header">
+        <div>
+          <div class="eyebrow">BUSINESS STACK</div>
+          <h1>Recommended business tools.</h1>
+          <p>Connect useful services and create another potential revenue stream through approved affiliate programs.</p>
+        </div>
+      </div>
+
+      <div id="affiliateGrid" class="affiliate-grid"></div>
+
+    </section>
+
+
+    <section id="settingsPanel" class="workspace-panel hidden">
+
+      <div class="panel-header">
+        <div>
+          <div class="eyebrow">PROJECT SETTINGS</div>
+          <h1>Customize your project.</h1>
+        </div>
+      </div>
+
+      <div class="settings-card">
+
+        <label>
+          Project name
+          <input id="projectName" type="text" value="My Business">
+        </label>
+
+        <label>
+          Main call-to-action
+          <input id="ctaText" type="text" value="Get Started">
+        </label>
+
+        <label>
+          Business email
+          <input id="businessEmail" type="email" placeholder="you@example.com">
+        </label>
+
+        <button id="settingsSaveBtn" class="btn primary">Save Settings</button>
+
+      </div>
+
+    </section>
+
+  </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/builder.js"></script>
+
+</body>
+</html>
